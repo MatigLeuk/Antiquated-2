@@ -1,27 +1,26 @@
 <?xml version="1.0"?>
-<map proto="1.3.3">
-<name>Antiquated</name>
-<version>1.2.1</version>
-<objective>Destroy Both Enemy Monuments In Their Entirety.</objective>
+<map proto="1.3.6">
+<name>Vieillot</name>
+<version>1.0.1</version>
+<objective></objective>
 <authors>
     <author>Matig</author>
 </authors>
 <contributors>
-    <contributor contribution="Aesthetics">Thieved</contributor>
-    <contributor contribution="Is Thieved :P">Niftie</contributor>
+	<contributor contributation="Entropy">Entropie</contributor>
 </contributors>
 <rules>
-    <rule>No Chaos Cannons!</rule>
+    <rule>No Shoes!</rule>
 </rules>
 <teams>
-   <team color="purple" max="18" max-overfill="24">Purple Team</team>
-   <team color="yellow" max="18" max-overfill="24">Yellow Team</team>
+   <team color="cyan" max="30" max-overfill="36">La Fleur</team>
+   <team color="orange" max="30" max-overfill="36">Le Soleil</team>
 </teams>
 <spawns>
-    <spawn team="yellow" kit="yellow" safe="true">
+    <spawn team="" kit="" safe="true">
         <cuboid min="7,2,80" max="2,2,75"/>
     </spawn>
-    <spawn team="purple" kit="purple" safe="true">
+    <spawn team="" kit="" safe="true">
         <cuboid min="2,2,-69" max="7,2,-64"/>
     </spawn>
     <default yaw="90">
@@ -46,13 +45,13 @@
         <item slot="9" amount="64">arrow</item>
         <item slot="17" amount="1" lore="`6Right Click To Defuse TNT!|`4Does Not Work In Water! name="`6TNT Defusers>shear</item>
     </kit>
-    <kit name="purple" parents="spawn">
-        <helmet color="7F3FB2">leather helmet</helmet>
-        <boots color="7F3FB2">leather boots</boots>
+    <kit name="" parents="spawn">
+        <helmet color="">leather helmet</helmet>
+        <boots color="">leather boots</boots>
         <item slot="4" damage="10">stained clay</item>
         <item slot="31" damage="10">stained glass</item>
     </kit>
-    <kit name="yellow" parents="spawn">
+    <kit name="" parents="spawn">
         <helmet color="0E5E533">leather helmet</helmet>
         <boots color="0E5E533">leather helmet</helmet>
         <item slot="4" damage="4">stained clay</item>
@@ -60,18 +59,18 @@
     </kit>
 </kits>
 <destroyables name="Monument A" materials="obsidian" completion="100%" mode-changes="true" show=progress="true" repairable="false">
-    <destroyable owner="purple">
+    <destroyable owner="">
        <cuboid min="14,36,-77" max="16,38,-75"/>
     </destroyable>
-    <destroyable owner="yellow">
+    <destroyable owner="">
        <cuboid min="-38,36,88" max="-40,38,90"/>
     </destroyable>
 </destroyables>
 <destroyables name="Monument B" materials="obsidian" completion="100%" mode-changes="true">
-    <destroyable owner="purple">
+    <destroyable owner="">
        <cuboid min="-38,35,-75" max="-40,37,-77"/>
     </destroyable>
-    <destroyable owner="yellow">
+    <destroyable owner="">
        <cuboid min="14,35,88" max="16,37,90"/>
     </destroyable>
 </destroyables>
@@ -79,28 +78,28 @@
     <mode after="5m" material="coal block"/>
 </modes>
 <filters>
-    <filter name="only-yellow">
-        <team>yellow</team>
+    <filter name="only-">
+        <team></team>
     </filter>
-    <filter name="only-purple">
-        <team>purple</team>
+    <filter name="only-">
+        <team></team>
     </filter>
 </filters>
 <regions>
     <rectangle name="main-area" min="26,-106" max="-50,118"/>
-    <cuboid name="yellow-spawn" min="-20,0,45" max="-4,oo,61"/>
-    <cuboid name="purple-spawn" min="-4,0,-32" max="-20,oo,-48"/>
+    <cuboid name="-spawn" min="-20,0,45" max="-4,oo,61"/>
+    <cuboid name="-spawn" min="-4,0,-32" max="-20,oo,-48"/>
     <apply block="deny-blocks" message="you may not break blocks in spawn!">
-        <region name="yellow-spawn"/>
+        <region name="-spawn"/>
     </apply>
-    <apply enter="only-yellow" message="you may not enter the enemy teams base!">
-        <region name="yellow-spawn"/>
+    <apply enter="only-" message="you may not enter the enemy teams base!">
+        <region name="-spawn"/>
     </apply>
     <apply block="deny-blocks" message="you may not break blocks in spawn!">
-        <region name="purple-spawn"/>
+        <region name="-spawn"/>
     </apply>
-    <apply enter="only-purple" message="you may not enter the enemy teams base!">
-        <region name="yellow-purple"/>
+    <apply enter="only-" message="you may not enter the enemy teams base!">
+        <region name="-"/>
     </apply>
     <apply block="deny-blocks" message="you may not leave the playing field">
         <negative>
